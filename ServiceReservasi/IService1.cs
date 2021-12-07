@@ -19,8 +19,9 @@ namespace ServiceReservasi
 
         [OperationContract]
         string pemesanan(string IDPemesanan, string NamaCustomer, string NoTelpon, int JumlahPemesanan, string IDLokasi);
+
         [OperationContract]
-        string editPemesanan(string IDPemesanan, string NamaCustomer);
+        string editPemesanan(string IDPemesanan, string NamaCustomer, string NoTelpon);
 
         [OperationContract]
         String deletePemesanan(string IDPemesanan);
@@ -70,13 +71,13 @@ namespace ServiceReservasi
         public int Kuota { get; set; }
     }
 
-    public class Pemesanan
+    public class Pemesanan //create
     {
         [DataMember]
         public string IDPemesanan { get; set; }
 
         [DataMember]
-        public string NamaCustomer { get; set; }
+        public string NamaCustomer { get; set; } //method
 
         [DataMember]
         public string NoTelpon { get; set; }
@@ -85,7 +86,7 @@ namespace ServiceReservasi
         public int JumlahPemesanan { get; set; }
 
         [DataMember]
-        public string IDLokasi { get; set; }
+        public string Lokasi { get; set; }
     }
 
     public class CompositeType
